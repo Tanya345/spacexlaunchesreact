@@ -93,7 +93,7 @@ input[type='radio']:checked+label{
 }
 .childCard{
   /* flex: 20%; */
-  width: 195px;
+  width: 200px;
   padding: 10px;
   border: 2px solid black;
   border-radius: 10px;
@@ -115,11 +115,29 @@ input[type='radio']:checked+label{
   .childCard {
     display:flex;
     flex-direction: column; 
+    width: -webkit-fill-available;
    }
+   .filterDiv{
+    width:-webkit-fill-available;
+   }
+   
+}
+@media screen and (max-width: 500px) {
+   .filterDiv{
+    width:-webkit-fill-available;
+    margin: 9px 49px;
+   }
+   .App{
+     flex-wrap: wrap;
+   }
+   
 }
 @media screen and (max-width: 1024px) and (min-width: 700px) {
   .childCard {
    grid-template-columns: repeat(2,auto);
+   width:auto;
+   margin: inherit;
+   padding: inherit;
   }
 }
 @media screen and (max-width: 1440px) and (min-width: 1024px){
